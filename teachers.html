@@ -6,22 +6,52 @@
   <title>강사 소개 - GRIT EDU</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* 간단한 예시 CSS, 필요에 따라 style.css에 추가하세요 */
-    .subject-section {
-      margin-bottom: 30px;
+    /* 강사 소개 섹션 스타일 */
+    .teacher-section {
+      position: relative;
+      padding-bottom: 60px; /* 메뉴가 들어갈 공간 확보 */
     }
-    .subject-section h3 {
-      background-color: #f0f0f0;
-      padding: 10px;
-      margin-bottom: 10px;
+
+    /* 과목별 메뉴 기본 숨김 */
+    .subject-menu {
+      display: none;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #f0f0f0;
+      border-top: 1px solid #ddd;
+      padding: 10px 0;
+      text-align: center;
+      transition: all 0.3s ease;
     }
-    .subject-section ul {
+
+    /* 강사 섹션에 마우스 올리면 메뉴 표시 */
+    .teacher-section:hover .subject-menu {
+      display: block;
+    }
+
+    /* 메뉴 목록 스타일 */
+    .subject-menu ul {
       list-style: none;
+      margin: 0;
       padding: 0;
     }
-    .subject-section ul li {
-      padding: 5px 0;
-      border-bottom: 1px solid #ddd;
+    .subject-menu ul li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+    .subject-menu ul li a {
+      text-decoration: none;
+      color: #0078d4;
+      font-weight: bold;
+      padding: 5px 10px;
+      border: 1px solid transparent;
+      transition: border 0.2s ease;
+    }
+    .subject-menu ul li a:hover {
+      border: 1px solid #0078d4;
+      border-radius: 4px;
     }
   </style>
 </head>
@@ -37,57 +67,32 @@
     </nav>
   </header>
   <main>
-    <section>
+    <!-- 강사 소개 섹션 -->
+    <section class="teacher-section">
       <h2>강사 소개</h2>
+      <div class="teacher-list">
+        <!-- 예시: 강사 프로필 카드 (원하는 방식으로 확장 가능) -->
+        <div class="teacher-profile">
+          <img src="img/teacher1.jpg" alt="박소진">
+          <h3>박소진</h3>
+        </div>
+        <div class="teacher-profile">
+          <img src="img/teacher2.jpg" alt="강지웅">
+          <h3>강지웅</h3>
+        </div>
+        <!-- 다른 강사 카드들 추가 -->
+      </div>
 
-      <!-- 국어과 -->
-      <div class="subject-section">
-        <h3>국어과</h3>
+      <!-- 마우스 오버 시 나타나는 과목별 메뉴 -->
+      <div class="subject-menu">
         <ul>
-          <li>박소진</li>
-          <li>강지웅</li>
+          <li><a href="korean.html">국어과</a></li>
+          <li><a href="math.html">수학과</a></li>
+          <li><a href="english.html">영어과</a></li>
+          <li><a href="science.html">과학과</a></li>
+          <li><a href="examinfo.html">입시정보</a></li>
         </ul>
       </div>
-
-      <!-- 수학과 -->
-      <div class="subject-section">
-        <h3>수학과</h3>
-        <ul>
-          <li>유홍석</li>
-          <li>조경희</li>
-          <li>김현진</li>
-          <li>이관우</li>
-          <li>박건하</li>
-          <li>최재영</li>
-          <li>허정행</li>
-        </ul>
-      </div>
-
-      <!-- 영어과 -->
-      <div class="subject-section">
-        <h3>영어과</h3>
-        <ul>
-          <li>조봉현</li>
-          <li>오혜빈</li>
-          <li>박혜린</li>
-        </ul>
-      </div>
-
-      <!-- 과학과 -->
-      <div class="subject-section">
-        <h3>과학과</h3>
-        <ul>
-          <li>오준석</li>
-          <li>김정연</li>
-        </ul>
-      </div>
-
-      <!-- 입시정보 -->
-      <div class="subject-section">
-        <h3>입시정보</h3>
-        <p>준비 중입니다.</p>
-      </div>
-
     </section>
   </main>
   <script src="js/script.js"></script>
