@@ -17,7 +17,6 @@ header {
   background: #0078d4;
   padding: 10px 20px;
   color: #fff;
-  text-align: center;
 }
 
 header h1 {
@@ -57,11 +56,12 @@ nav ul li a:hover {
   border: 1px solid #ddd;
   min-width: 150px;
   z-index: 1000;
-  text-align: center;
+  justify-self: center;
 }
 
 .dropdown-menu li {
   display: block;
+  justify-self: center;
 }
 
 .dropdown-menu li a {
@@ -71,26 +71,26 @@ nav ul li a:hover {
   text-decoration: none;
   background: #fff;
   display: block;
-  text-align: center;
+  justify-self: center;
 }
 
 .dropdown-menu li a:hover {
   background: #f9f9f9;
+  justify-self: center;
 }
 
 .dropdown:hover .dropdown-menu {
   display: block;
+  justify-self: center;
 }
 
 /* ===== Main Content ===== */
 main {
   padding: 20px;
-  text-align: center;
 }
 
 section {
   margin-bottom: 20px;
-  text-align: center;
 }
 
 /* 예시: 강사 프로필 카드 스타일 (선택사항) */
