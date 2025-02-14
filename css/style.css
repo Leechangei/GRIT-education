@@ -46,16 +46,7 @@ nav ul {
 nav ul li {
   position: relative; /* 드롭다운 메뉴의 절대 위치 기준 */
   margin-right: 0;
-  margin: 15 15px;
-}
-
-nav ul li:first-child {
-  margin-left: 0;
-}
-
-/* 마지막 항목의 margin-right 제거 (선택사항) */
-nav ul li:last-child {
-  margin-right: 0;
+  margin: 40px 40px;
 }
 
 /* 네비게이션 링크 스타일 */
