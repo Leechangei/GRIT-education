@@ -22,9 +22,10 @@ header, main, body, section, footer {
 
 /* ===== Header & Navigation ===== */
 header {
-  background: #0078d4;
+  background: none;
   padding: 10px 20px;
-  color: #fff;
+  color: #000;
+  border-bottom: 1px solid #ddd;
 }
 
 /* 헤더의 사이트 제목 */
@@ -45,6 +46,7 @@ nav ul {
 nav ul li {
   position: relative; /* 드롭다운 메뉴의 절대 위치 기준 */
   margin-right: 0;
+  margin: 0 40px;
 }
 
 /* 마지막 항목의 margin-right 제거 (선택사항) */
