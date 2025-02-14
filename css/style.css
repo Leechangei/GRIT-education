@@ -12,6 +12,14 @@ body {
   color: #333;
 }
 
+/* 
+  전체적인 텍스트 중앙 정렬.
+  (필요에 따라 일부 구역만 중앙 정렬하고 싶다면 선택자 범위를 조정하세요.)
+*/
+header, main, section, footer {
+  text-align: center;
+}
+
 /* ===== Header & Navigation ===== */
 header {
   background: #0078d4;
@@ -19,21 +27,31 @@ header {
   color: #fff;
 }
 
+/* 헤더의 사이트 제목 */
 header h1 {
   font-size: 2rem;
   margin-bottom: 10px;
 }
 
+/* 네비게이션 메뉴: Flexbox로 중앙 정렬 */
 nav ul {
   list-style: none;
   display: flex;
+  justify-content: center;  /* 가로 중앙 정렬 */
 }
 
+/* 네비게이션 항목 스타일 */
 nav ul li {
-  position: relative; /* 드롭다운 메뉴를 위한 기준 */
+  position: relative; /* 드롭다운 메뉴의 절대 위치 기준 */
   margin-right: 20px;
 }
 
+/* 마지막 항목의 margin-right 제거 (선택사항) */
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+/* 네비게이션 링크 스타일 */
 nav ul li a {
   color: #fff;
   text-decoration: none;
@@ -45,23 +63,24 @@ nav ul li a:hover {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* ===== Dropdown Menu for "강사소개" ===== */
+/* ===== Dropdown Menu ===== */
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%; /* 부모 요소 바로 아래 위치 */
-  left: 50;
-  transform: translateX(-50%);
+  top: 100%; /* 부모(li) 바로 아래 */
+  left: 0;
   background: #fff;
   border: 1px solid #ddd;
   min-width: 150px;
   z-index: 1000;
 }
 
+/* 드롭다운 리스트: 세로 목록 */
 .dropdown-menu li {
   display: block;
 }
 
+/* 드롭다운 링크 스타일 (중앙 정렬) */
 .dropdown-menu li a {
   color: #0078d4;
   padding: 8px 15px;
@@ -69,15 +88,22 @@ nav ul li a:hover {
   text-decoration: none;
   background: #fff;
   display: block;
+  width: 100%;
   text-align: center;
+}
+
+/* 마지막 항목의 border 제거 */
+.dropdown-menu li:last-child a {
+  border-bottom: none;
+}
+
+/* 호버 시 드롭다운 표시 */
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 .dropdown-menu li a:hover {
   background: #f9f9f9;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
 }
 
 /* ===== Main Content ===== */
@@ -85,16 +111,17 @@ main {
   padding: 20px;
 }
 
+/* 섹션 사이 간격 */
 section {
   margin-bottom: 20px;
 }
 
-/* 예시: 강사 프로필 카드 스타일 (선택사항) */
+/* ===== Teacher Profile Card (선택사항) ===== */
 .teacher-list {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
+  justify-content: center; /* 카드들을 가로로 중앙 정렬 */
 }
 
 .teacher-profile {
@@ -123,13 +150,10 @@ section {
   color: #555;
 }
 
-/* ===== Footer (선택사항) ===== */
+/* ===== Footer ===== */
 footer {
   background: #0078d4;
   padding: 10px 20px;
   color: #fff;
-  text-align: center;
-}
-header, main, section {
-  text-align: center;
+  text-align: center; 
 }
