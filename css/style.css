@@ -46,7 +46,7 @@ nav ul {
 nav ul li {
   position: relative; /* 드롭다운 메뉴의 절대 위치 기준 */
   margin-right: 0;
-  margin: 0 50px;
+  margin: 15 15px;
 }
 
 nav ul li:first-child {
@@ -67,7 +67,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: #ddd;
 }
 
 /* ===== Dropdown Menu ===== */
