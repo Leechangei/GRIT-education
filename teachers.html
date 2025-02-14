@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>강사 소개 - GRIT EDU</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* 과목 섹션 공통 스타일 */
+    .subject-section {
+      border: 1px solid #ddd;
+      margin: 20px auto;
+      padding: 20px;
+      width: 80%;           /* 페이지 폭의 80% 정도 (원하는 대로 조절) */
+      position: relative;   /* :target, :hover 등 위치 계산에 활용 가능 */
+      text-align: center;
+    }
+    .subject-section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    /* 선생님 목록 기본 숨김 */
+    .teacher-list {
+      display: none;
+      margin-top: 10px;
+    }
+
+    /* 마우스 호버 시 선생님 목록 표시 */
+    .subject-section:hover .teacher-list {
+      display: block;
+    }
+
+    /* 해시(#)로 이동했을 때 해당 섹션의 teacher-list 표시 (CSS :target 사용) */
+    .subject-section:target .teacher-list {
+      display: block;
+    }
+
+    /* 선생님 프로필 항목 간단 스타일 */
+    .teacher-profile {
+      margin: 10px 0;
+    }
+    .teacher-profile a {
+      text-decoration: none;
+      color: #0078d4;
+      font-weight: bold;
+    }
+    .teacher-profile a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GRIT EDU</h1>
+    <!-- 여기에도 네비게이션이 들어갈 수 있음 -->
+  </header>
+
+  <main>
+    <!-- 국어과 -->
+    <section id="korean" class="subject-section">
+      <h2>국어과</h2>
+      <div class="teacher-list">
+        <div class="teacher-profile">
+          <a href="teacher-kim.html">김선생</a>
+        </div>
+        <div class="teacher-profile">
+          <a href="teacher-park.html">박선생</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 수학과 -->
+    <section id="math" class="subject-section">
+      <h2>수학과</h2>
+      <div class="teacher-list">
+        <div class="teacher-profile">
+          <a href="teacher-yu.html">유선생</a>
+        </div>
+        <div class="teacher-profile">
+          <a href="teacher-cho.html">조선생</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 영어과 -->
+    <section id="english" class="subject-section">
+      <h2>영어과</h2>
+      <div class="teacher-list">
+        <div class="teacher-profile">
+          <a href="teacher-lee.html">이선생</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 과학과 -->
+    <section id="science" class="subject-section">
+      <h2>과학과</h2>
+      <div class="teacher-list">
+        <div class="teacher-profile">
+          <a href="teacher-oh.html">오선생</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 입시정보 -->
+    <section id="examinfo" class="subject-section">
+      <h2>입시정보</h2>
+      <div class="teacher-list">
+        <!-- 필요하다면 선생님 or 정보 링크 -->
+        <p>준비 중입니다.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GRIT EDU</p>
+  </footer>
+</body>
+</html>
