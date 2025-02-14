@@ -70,7 +70,7 @@ nav ul li a:hover {
   position: absolute;
   top: 100%; /* 부모(li) 바로 아래 */
   left: 50% !important;
-  transform: translateX(-50%);
+  transform: translateX(-50%) !important;
   background: #fff;
   border: 1px solid #ddd;
   min-width: 150px;
