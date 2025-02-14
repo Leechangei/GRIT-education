@@ -3,70 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>강사 소개개 - GRIT EDU</title>
-  <link rel="stylesheet" href="css/style.css"> <!-- 기존 스타일과 통합 가능 -->
+  <title>선생님 소개 - GRIT EDU</title>
+  <link rel="stylesheet" href="css/style.css">
   <style>
-    /* 전체 레이아웃 컨테이너 */
-    .teachers-container {
-      display: flex;
-      min-height: 80vh; /* 사이드바와 메인 콘텐츠를 가로 배치 */
-    }
-
-    /* 사이드바 */
-    .sidebar {
-      width: 220px;
-      border-right: 1px solid #ddd;
-      padding: 20px;
-    }
-    .sidebar h3 {
-      margin-bottom: 10px;
-      font-size: 1.2rem;
-    }
-    .sidebar ul {
-      list-style: none;
-      padding-left: 0;
+    /* 전체 페이지 스타일 */
+    body {
+      font-family: Arial, sans-serif;
       margin: 0;
-    }
-    .sidebar ul li {
-      margin: 8px 0;
-    }
-    .sidebar ul li a {
-      text-decoration: none;
+      padding: 0;
+      background: #fff;
       color: #333;
-      font-size: 0.95rem;
     }
-    .sidebar ul li a:hover {
-      text-decoration: underline;
+    header {
+      border-bottom: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
     }
-
-    /* 메인 영역 */
-    .teacher-content {
-      flex: 1;
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
       padding: 20px;
     }
-    .teacher-content h2 {
+    section {
+      margin-bottom: 40px;
+    }
+    section h2 {
       font-size: 1.4rem;
-      margin-bottom: 15px;
-    }
-
-    /* 탭 버튼 */
-    .tabs {
-      display: flex;
-      gap: 10px;
       margin-bottom: 20px;
-    }
-    .tabs button {
-      background: #f0f0f0;
-      border: 1px solid #ddd;
-      padding: 8px 15px;
-      cursor: pointer;
-      font-size: 0.95rem;
-      border-radius: 4px;
-    }
-    .tabs button.active {
-      background: #0078d4;
-      color: #fff;
-      border-color: #0078d4;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
     }
 
     /* 선생님 카드 그리드 */
@@ -80,9 +49,9 @@
       padding: 15px;
       border-radius: 8px;
       text-align: center;
-      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s ease;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
       background: #fff;
+      transition: transform 0.2s ease;
     }
     .teacher-card:hover {
       transform: translateY(-3px);
@@ -95,81 +64,150 @@
       margin-bottom: 10px;
     }
     .teacher-card h3 {
-      margin-bottom: 5px;
+      margin: 0 0 5px;
       font-size: 1rem;
     }
     .teacher-card p {
       font-size: 0.9rem;
       color: #555;
+      margin: 0;
+    }
+
+    footer {
+      border-top: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+      font-size: 0.9rem;
+      background: #f9f9f9;
     }
   </style>
 </head>
 <body>
-  <!-- 상단 헤더 (원하는 대로 구성) -->
-  <header style="border-bottom: 1px solid #ddd; padding: 10px;">
+  <header>
     <h1>GRIT EDU</h1>
   </header>
 
   <main>
-    <div class="teachers-container">
-      <!-- 왼쪽 사이드바 -->
-      <aside class="sidebar">
-        <h3>선생님</h3>
-        <ul>
-          <li><a href="#">국어영역</a></li>
-          <li><a href="#">수학영역</a></li>
-          <li><a href="#">영어영역</a></li>
-          <li><a href="#">과학탐구영역</a></li>
-          <li><a href="#">입시정보</a></li>
-          <!-- 필요한 만큼 추가 -->
-        </ul>
-      </aside>
-
-      <!-- 메인 영역 -->
-      <section class="teacher-content">
-        <h2>선생님</h2>
-        <!-- 탭 메뉴 (예: 과목별) -->
-        <div class="tabs">
-          <button class="active">국어영역</button>
-          <button>영어영역</button>
-          <button>과학탐구영역</button>
-          <button>입시정보보</button>
+    <!-- 국어과 -->
+    <section>
+      <h2>국어과</h2>
+      <div class="teacher-grid">
+        <!-- 박소진 선생님: "Park So Jin" -> psj -->
+        <div class="teacher-card">
+          <img src="img/teacher_psj.jpg" alt="박소진 선생님">
+          <h3>박소진 선생님</h3>
+          <p>국어과</p>
         </div>
-
-        <!-- 선생님 카드 목록 -->
-        <div class="teacher-grid">
-          <!-- 예시 카드 1 -->
-          <div class="teacher-card">
-            <img src="img/teacher_kim.jpg" alt="김주혁 선생님">
-            <h3>김주혁 선생님</h3>
-            <p>국어영역</p>
-          </div>
-          <!-- 예시 카드 2 -->
-          <div class="teacher-card">
-            <img src="img/teacher_lee.jpg" alt="이태동 선생님">
-            <h3>이태동 선생님</h3>
-            <p>국어영역</p>
-          </div>
-          <!-- 예시 카드 3 -->
-          <div class="teacher-card">
-            <img src="img/teacher_song.jpg" alt="송중민 선생님">
-            <h3>송중민 선생님</h3>
-            <p>국어영역</p>
-          </div>
-          <!-- 예시 카드 4 -->
-          <div class="teacher-card">
-            <img src="img/teacher_lee2.jpg" alt="이혜진 선생님">
-            <h3>이혜진 선생님</h3>
-            <p>국어영역</p>
-          </div>
-          <!-- 필요한 만큼 카드 추가 -->
+        <!-- 강지웅 선생님: "Kang Ji Woong" -> kjw -->
+        <div class="teacher-card">
+          <img src="img/teacher_kjw.jpg" alt="강지웅 선생님">
+          <h3>강지웅 선생님</h3>
+          <p>국어과</p>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+
+    <!-- 수학과 -->
+    <section>
+      <h2>수학과</h2>
+      <div class="teacher-grid">
+        <!-- 유홍석: "Yu Hong Seok" -> yhs -->
+        <div class="teacher-card">
+          <img src="img/teacher_yhs.jpg" alt="유홍석 선생님">
+          <h3>유홍석 선생님</h3>
+          <p>수학과</p>
+        </div>
+        <!-- 조경희: "Jo Gyeong Hui" -> jgh -->
+        <div class="teacher-card">
+          <img src="img/teacher_jgh.jpg" alt="조경희 선생님">
+          <h3>조경희 선생님</h3>
+          <p>수학과</p>
+        </div>
+        <!-- 김현진: "Kim Hyun Jin" -> khj -->
+        <div class="teacher-card">
+          <img src="img/teacher_khj.jpg" alt="김현진 선생님">
+          <h3>김현진 선생님</h3>
+          <p>수학과</p>
+        </div>
+        <!-- 이관우: "Lee Gwan U" -> lgu -->
+        <div class="teacher-card">
+          <img src="img/teacher_lgu.jpg" alt="이관우 선생님">
+          <h3>이관우 선생님</h3>
+          <p>수학과</p>
+        </div>
+        <!-- 박건하: "Park Geon Ha" -> pgh -->
+        <div class="teacher-card">
+          <img src="img/teacher_pgh.jpg" alt="박건하 선생님">
+          <h3>박건하 선생님</h3>
+          <p>수학과</p>
+        </div>
+        <!-- 최재영: "Choi Jae Young" -> cjy -->
+        <div class="teacher-card">
+          <img src="img/teacher_cjy.jpg" alt="최재영 선생님">
+          <h3>최재영 선생님</h3>
+          <p>수학과</p>
+        </div>
+        <!-- 허정행: "Heo Jeong Haeng" -> hjh -->
+        <div class="teacher-card">
+          <img src="img/teacher_hjh.jpg" alt="허정행 선생님">
+          <h3>허정행 선생님</h3>
+          <p>수학과</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 영어과 -->
+    <section>
+      <h2>영어과</h2>
+      <div class="teacher-grid">
+        <!-- 조봉현: "Jo Bong Hyeon" -> jbh -->
+        <div class="teacher-card">
+          <img src="img/teacher_jbh.jpg" alt="조봉현 선생님">
+          <h3>조봉현 선생님</h3>
+          <p>영어과</p>
+        </div>
+        <!-- 오혜빈: "Oh Hye Bin" -> ohb -->
+        <div class="teacher-card">
+          <img src="img/teacher_ohb.jpg" alt="오혜빈 선생님">
+          <h3>오혜빈 선생님</h3>
+          <p>영어과</p>
+        </div>
+        <!-- 박혜린: "Park Hye Rin" -> phr -->
+        <div class="teacher-card">
+          <img src="img/teacher_phr.jpg" alt="박혜린 선생님">
+          <h3>박혜린 선생님</h3>
+          <p>영어과</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 과학과 -->
+    <section>
+      <h2>과학과</h2>
+      <div class="teacher-grid">
+        <!-- 오준석: "Oh Jun Seok" -> ojs -->
+        <div class="teacher-card">
+          <img src="img/teacher_ojs.jpg" alt="오준석 선생님">
+          <h3>오준석 선생님</h3>
+          <p>과학과</p>
+        </div>
+        <!-- 김정연: "Kim Jeong Yeon" -> kjy -->
+        <div class="teacher-card">
+          <img src="img/teacher_kjy.jpg" alt="김정연 선생님">
+          <h3>김정연 선생님</h3>
+          <p>과학과</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 입시정보 -->
+    <section>
+      <h2>입시정보</h2>
+      <p>준비 중입니다.</p>
+    </section>
   </main>
 
-  <!-- 하단 푸터 (원하는 대로 구성) -->
-  <footer style="border-top: 1px solid #ddd; padding: 10px; text-align: center;">
+  <footer>
     <p>&copy; 2025 GRIT EDU</p>
   </footer>
 </body>
