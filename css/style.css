@@ -45,10 +45,10 @@ nav ul {
 /* 네비게이션 항목 스타일 */
 nav ul li {
   position: relative; /* 드롭다운 메뉴의 절대 위치 기준 */
-  margin-right: 40px;
-  margin-left: 40px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 /* 네비게이션 링크 스타일 */
@@ -172,7 +172,7 @@ footer {
 .mega-dropdown:hover .mega-menu {
   display: flex; /* flex로 열을 가로로 배치 */
   justify-content: space-around; /* 열 사이 균등 분배 */
-  gap: 20px;
+  gap: 5px;
 }
 
 /* 개별 컬럼 스타일 */
