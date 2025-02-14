@@ -45,8 +45,10 @@ nav ul {
 /* 네비게이션 항목 스타일 */
 nav ul li {
   position: relative; /* 드롭다운 메뉴의 절대 위치 기준 */
-  margin-right: 0;
-  margin: 40px 40px;
+  margin-right: 40px;
+  margin-left: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /* 네비게이션 링크 스타일 */
@@ -91,11 +93,6 @@ nav ul li a:hover {
   width: 100%;
   text-align: center;
   font-size: 0.8rem;
-}
-
-/* 마지막 항목의 border 제거 */
-.dropdown-menu li:last-child a {
-  border-bottom: none;
 }
 
 /* 호버 시 드롭다운 표시 */
