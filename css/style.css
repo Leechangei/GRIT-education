@@ -27,7 +27,6 @@ header h1 {
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
 }
 
 nav ul li {
@@ -51,17 +50,16 @@ nav ul li a:hover {
   display: none;
   position: absolute;
   top: 100%; /* 부모 요소 바로 아래 위치 */
-  left: 0;
+  left: 50;
+  transform: translateX(-50%);
   background: #fff;
   border: 1px solid #ddd;
   min-width: 150px;
   z-index: 1000;
-  justify-self: center;
 }
 
 .dropdown-menu li {
   display: block;
-  justify-self: center;
 }
 
 .dropdown-menu li a {
@@ -71,17 +69,15 @@ nav ul li a:hover {
   text-decoration: none;
   background: #fff;
   display: block;
-  justify-self: center;
+  text-align: center;
 }
 
 .dropdown-menu li a:hover {
   background: #f9f9f9;
-  justify-self: center;
 }
 
 .dropdown:hover .dropdown-menu {
   display: block;
-  justify-self: center;
 }
 
 /* ===== Main Content ===== */
