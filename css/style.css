@@ -132,3 +132,6 @@ footer {
   color: #fff;
   text-align: center;
 }
+header, main, section {
+  text-align: center;
+}
