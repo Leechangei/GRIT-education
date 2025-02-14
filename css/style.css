@@ -70,6 +70,7 @@ nav ul li a:hover {
   text-decoration: none;
   background: #fff;
   display: block;
+  text-align: center;
 }
 
 .dropdown-menu li a:hover {
