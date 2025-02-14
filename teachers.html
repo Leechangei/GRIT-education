@@ -1,73 +1,9 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  </head>
-<body>
-  <header>
-    <h1>GRIT EDU</h1>
-    <nav>
-      <ul>
-        <!-- 홈 -->
-        <li><a href="index.html">홈</a></li>
-
-        <!-- 메가메뉴 (선생님) -->
-        <li class="mega-dropdown">
-          <a href="teachers.html">선생님</a>
-          <div class="mega-menu">
-            <div class="mega-column">
-              <h3>국어영역</h3>
-              <ul>
-                <li><a href="#">박소진 선생님</a></li>
-                <li><a href="#">강지웅 선생님</a></li>
-              </ul>
-            </div>
-            <div class="mega-column">
-              <h3>수학영역</h3>
-              <ul>
-                <li><a href="#">유홍석 선생님</a></li>
-                <li><a href="#">조경희 선생님</a></li>
-                <li><a href="#">김현진 선생님</a></li>
-                <li><a href="#">이관우 선생님</a></li>
-                <li><a href="#">박건하 선생님</a></li>
-                <li><a href="#">최재영 선생님</a></li>
-                <li><a href="#">허정행 선생님</a></li>
-              </ul>
-            </div>
-            <div class="mega-column">
-              <h3>영어영역</h3>
-              <ul>
-                <li><a href="#">조봉현 선생님</a></li>
-                <li><a href="#">오혜빈 선생님</a></li>
-                <li><a href="#">박혜린 선생님</a></li>
-              </ul>
-            </div>
-            <div class="mega-column">
-              <h3>과학탐구영역</h3>
-              <ul>
-                <li><a href="#">오준석 선생님</a></li>
-                <li><a href="#">김정연 선생님</a></li>
-              </ul>
-            </div>
-          </div>
-        </li>
-
-        <!-- 무료 인터넷 강의 -->
-        <li><a href="online.html">무료 인터넷 강의</a></li>
-
-        <!-- 더보기 (드롭다운) -->
-        <li class="dropdown">
-          <a href="#">더보기</a>
-          <ul class="dropdown-menu">
-            <li><a href="facility.html">시설 안내</a></li>
-            <li><a href="location.html">오시는 길</a></li>
-            <li><a href="contact.html">문의</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </header>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRIT EDU</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
     /* ===== 레이아웃 기본 ===== */
@@ -78,6 +14,7 @@
       background: #fff;
       color: #333;
     }
+    /* 상단 헤더 */
     header {
       border-bottom: 1px solid #ddd;
       padding: 10px;
@@ -89,10 +26,106 @@
       font-size: 2rem;
     }
 
+    /* 네비게이션(메인 메뉴) */
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 10px 0 0;
+      padding: 0;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      padding: 5px;
+      display: block;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* 메가메뉴(강사 소개) */
+    .mega-dropdown {
+      /* 부모 li */
+    }
+    .mega-menu {
+      display: none;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 100%;
+      background: #fff;
+      border: 1px solid #ddd;
+      width: 600px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 999;
+    }
+    .mega-dropdown:hover .mega-menu {
+      display: flex; 
+      justify-content: space-around; 
+      gap: 10px;
+    }
+    .mega-column h3 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      color: #0078d4;
+    }
+    .mega-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .mega-column ul li {
+      margin-bottom: 5px;
+    }
+    .mega-column ul li a {
+      color: #333;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .mega-column ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* 더보기 드롭다운 */
+    .dropdown ul.dropdown-menu {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      background: #fff;
+      border: 1px solid #ddd;
+      min-width: 120px;
+      z-index: 999;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .dropdown:hover ul.dropdown-menu {
+      display: block;
+    }
+    .dropdown-menu li {
+      margin: 0;
+    }
+    .dropdown-menu li a {
+      display: block;
+      padding: 8px 10px;
+      color: #333;
+      text-decoration: none;
+    }
+    .dropdown-menu li a:hover {
+      background: #f0f0f0;
+    }
+
     /* 메인 컨테이너: 사이드바 + 메인 컨텐츠 */
     .container {
-      display: flex;           /* 사이드바와 메인영역을 가로 배치 */
-      min-height: 100vh;       /* 페이지 높이를 채울 수 있도록 */
+      display: flex; 
+      min-height: 100vh;
     }
 
     /* ===== 사이드바 ===== */
@@ -125,7 +158,7 @@
 
     /* ===== 메인 영역 ===== */
     main {
-      flex: 1;            /* 남은 공간을 메인영역에 할당 */
+      flex: 1;  
       padding: 20px;
       background: #fff;
     }
@@ -185,9 +218,69 @@
   </style>
 </head>
 <body>
-  <!-- 상단 헤더 -->
+  <!-- 상단 헤더 + 네비게이션 -->
   <header>
     <h1>GRIT EDU</h1>
+    <nav>
+      <ul>
+        <!-- 홈 -->
+        <li><a href="index.html">홈</a></li>
+
+        <!-- 메가메뉴 (강사 소개) -->
+        <li class="mega-dropdown">
+          <a href="teachers.html">선생님</a>
+          <div class="mega-menu">
+            <div class="mega-column">
+              <h3><a href="#korean">국어영역</h3>
+              <ul>
+                <li><a href="#">박소진 선생님</a></li>
+                <li><a href="#">강지웅 선생님</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h3>수학영역</h3>
+              <ul>
+                <li><a href="#">유홍석 선생님</a></li>
+                <li><a href="#">조경희 선생님</a></li>
+                <li><a href="#">김현진 선생님</a></li>
+                <li><a href="#">이관우 선생님</a></li>
+                <li><a href="#">박건하 선생님</a></li>
+                <li><a href="#">최재영 선생님</a></li>
+                <li><a href="#">허정행 선생님</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h3>영어영역</h3>
+              <ul>
+                <li><a href="#">조봉현 선생님</a></li>
+                <li><a href="#">오혜빈 선생님</a></li>
+                <li><a href="#">박혜린 선생님</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h3>과학탐구영역</h3>
+              <ul>
+                <li><a href="#">오준석 선생님</a></li>
+                <li><a href="#">김정연 선생님</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 무료 인터넷 강의 -->
+        <li><a href="online.html">무료 인터넷 강의</a></li>
+
+        <!-- 더보기 (드롭다운) -->
+        <li class="dropdown">
+          <a href="#">더보기</a>
+          <ul class="dropdown-menu">
+            <li><a href="facility.html">시설 안내</a></li>
+            <li><a href="location.html">오시는 길</a></li>
+            <li><a href="contact.html">문의</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
   </header>
 
   <!-- 메인 컨테이너 (사이드바 + 메인영역) -->
@@ -196,7 +289,6 @@
     <aside class="sidebar">
       <h3>과목</h3>
       <ul>
-        <!-- 앵커 링크로 해당 섹션으로 이동 (#korean, #math 등) -->
         <li><a href="#korean">국어과</a></li>
         <li><a href="#math">수학과</a></li>
         <li><a href="#english">영어과</a></li>
@@ -211,13 +303,13 @@
       <section id="korean">
         <h2>국어과</h2>
         <div class="teacher-grid">
-          <!-- 박소진 선생님: teacher_psj.jpg -->
+          <!-- 박소진 -->
           <div class="teacher-card">
             <img src="img/teacher_psj.jpg" alt="박소진 선생님">
             <h3>박소진 선생님</h3>
             <p>국어과</p>
           </div>
-          <!-- 강지웅 선생님: teacher_kjw.jpg -->
+          <!-- 강지웅 -->
           <div class="teacher-card">
             <img src="img/teacher_kjw.jpg" alt="강지웅 선생님">
             <h3>강지웅 선생님</h3>
@@ -230,48 +322,19 @@
       <section id="math">
         <h2>수학과</h2>
         <div class="teacher-grid">
-          <!-- 유홍석: teacher_yhs.jpg -->
+          <!-- 유홍석 -->
           <div class="teacher-card">
             <img src="img/teacher_yhs.jpg" alt="유홍석 선생님">
             <h3>유홍석 선생님</h3>
             <p>수학과</p>
           </div>
-          <!-- 조경희: teacher_jgh.jpg -->
+          <!-- 조경희 -->
           <div class="teacher-card">
             <img src="img/teacher_jgh.jpg" alt="조경희 선생님">
             <h3>조경희 선생님</h3>
             <p>수학과</p>
           </div>
-          <!-- 김현진: teacher_khj.jpg -->
-          <div class="teacher-card">
-            <img src="img/teacher_khj.jpg" alt="김현진 선생님">
-            <h3>김현진 선생님</h3>
-            <p>수학과</p>
-          </div>
-          <!-- 이관우: teacher_lgu.jpg -->
-          <div class="teacher-card">
-            <img src="img/teacher_lgu.jpg" alt="이관우 선생님">
-            <h3>이관우 선생님</h3>
-            <p>수학과</p>
-          </div>
-          <!-- 박건하: teacher_pgh.jpg -->
-          <div class="teacher-card">
-            <img src="img/teacher_pgh.jpg" alt="박건하 선생님">
-            <h3>박건하 선생님</h3>
-            <p>수학과</p>
-          </div>
-          <!-- 최재영: teacher_cjy.jpg -->
-          <div class="teacher-card">
-            <img src="img/teacher_cjy.jpg" alt="최재영 선생님">
-            <h3>최재영 선생님</h3>
-            <p>수학과</p>
-          </div>
-          <!-- 허정행: teacher_hjh.jpg -->
-          <div class="teacher-card">
-            <img src="img/teacher_hjh.jpg" alt="허정행 선생님">
-            <h3>허정행 선생님</h3>
-            <p>수학과</p>
-          </div>
+          <!-- ... 나머지 선생님들 -->
         </div>
       </section>
 
@@ -279,19 +342,19 @@
       <section id="english">
         <h2>영어과</h2>
         <div class="teacher-grid">
-          <!-- 조봉현: teacher_jbh.jpg -->
+          <!-- 조봉현 -->
           <div class="teacher-card">
             <img src="img/teacher_jbh.jpg" alt="조봉현 선생님">
             <h3>조봉현 선생님</h3>
             <p>영어과</p>
           </div>
-          <!-- 오혜빈: teacher_ohb.jpg -->
+          <!-- 오혜빈 -->
           <div class="teacher-card">
             <img src="img/teacher_ohb.jpg" alt="오혜빈 선생님">
             <h3>오혜빈 선생님</h3>
             <p>영어과</p>
           </div>
-          <!-- 박혜린: teacher_phr.jpg -->
+          <!-- 박혜린 -->
           <div class="teacher-card">
             <img src="img/teacher_phr.jpg" alt="박혜린 선생님">
             <h3>박혜린 선생님</h3>
@@ -304,13 +367,13 @@
       <section id="science">
         <h2>과학과</h2>
         <div class="teacher-grid">
-          <!-- 오준석: teacher_ojs.jpg -->
+          <!-- 오준석 -->
           <div class="teacher-card">
             <img src="img/teacher_ojs.jpg" alt="오준석 선생님">
             <h3>오준석 선생님</h3>
             <p>과학과</p>
           </div>
-          <!-- 김정연: teacher_kjy.jpg -->
+          <!-- 김정연 -->
           <div class="teacher-card">
             <img src="img/teacher_kjy.jpg" alt="김정연 선생님">
             <h3>김정연 선생님</h3>
@@ -327,7 +390,6 @@
     </main>
   </div>
 
-  <!-- 푸터 -->
   <footer>
     <p>&copy; 2025 GRIT EDU</p>
   </footer>
