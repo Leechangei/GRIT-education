@@ -37,13 +37,14 @@ header h1 {
 nav ul {
   list-style: none;
   display: flex;
+  text-align: center;
   justify-content: center;  /* 가로 중앙 정렬 */
 }
 
 /* 네비게이션 항목 스타일 */
 nav ul li {
   position: relative; /* 드롭다운 메뉴의 절대 위치 기준 */
-  margin-right: 20px;
+  margin-right: 0;
 }
 
 /* 마지막 항목의 margin-right 제거 (선택사항) */
@@ -68,7 +69,8 @@ nav ul li a:hover {
   display: none;
   position: absolute;
   top: 100%; /* 부모(li) 바로 아래 */
-  left: 0;
+  left: 0%;
+  transform: translateX(-50%);
   background: #fff;
   border: 1px solid #ddd;
   min-width: 150px;
