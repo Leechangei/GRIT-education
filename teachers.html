@@ -6,7 +6,7 @@
   <title>선생님 소개 - GRIT EDU</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* 전체 페이지 스타일 */
+    /* ===== 레이아웃 기본 ===== */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -18,27 +18,64 @@
       border-bottom: 1px solid #ddd;
       padding: 10px;
       text-align: center;
+      background: #f9f9f9;
     }
     header h1 {
       margin: 0;
       font-size: 2rem;
     }
-    main {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 20px;
+
+    /* 메인 컨테이너: 사이드바 + 메인 컨텐츠 */
+    .container {
+      display: flex;           /* 사이드바와 메인영역을 가로 배치 */
+      min-height: 100vh;       /* 페이지 높이를 채울 수 있도록 */
     }
-    section {
+
+    /* ===== 사이드바 ===== */
+    aside.sidebar {
+      width: 220px;
+      border-right: 1px solid #ddd;
+      padding: 20px;
+      background: #fff;
+    }
+    .sidebar h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    .sidebar ul li {
+      margin: 8px 0;
+    }
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 0.95rem;
+    }
+    .sidebar ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== 메인 영역 ===== */
+    main {
+      flex: 1;            /* 남은 공간을 메인영역에 할당 */
+      padding: 20px;
+      background: #fff;
+    }
+    main section {
       margin-bottom: 40px;
     }
-    section h2 {
+    main section h2 {
       font-size: 1.4rem;
       margin-bottom: 20px;
       border-bottom: 1px solid #ddd;
       padding-bottom: 5px;
     }
 
-    /* 선생님 카드 그리드 */
+    /* ===== 선생님 카드 그리드 ===== */
     .teacher-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -73,6 +110,7 @@
       margin: 0;
     }
 
+    /* ===== 푸터 ===== */
     footer {
       border-top: 1px solid #ddd;
       padding: 10px;
@@ -83,130 +121,149 @@
   </style>
 </head>
 <body>
+  <!-- 상단 헤더 -->
   <header>
     <h1>GRIT EDU</h1>
   </header>
 
-  <main>
-    <!-- 국어과 -->
-    <section>
-      <h2>국어과</h2>
-      <div class="teacher-grid">
-        <!-- 박소진 선생님: "Park So Jin" -> psj -->
-        <div class="teacher-card">
-          <img src="img/teacher_psj.jpg" alt="박소진 선생님">
-          <h3>박소진 선생님</h3>
-          <p>국어과</p>
-        </div>
-        <!-- 강지웅 선생님: "Kang Ji Woong" -> kjw -->
-        <div class="teacher-card">
-          <img src="img/teacher_kjw.jpg" alt="강지웅 선생님">
-          <h3>강지웅 선생님</h3>
-          <p>국어과</p>
-        </div>
-      </div>
-    </section>
+  <!-- 메인 컨테이너 (사이드바 + 메인영역) -->
+  <div class="container">
+    <!-- 사이드바 -->
+    <aside class="sidebar">
+      <h3>과목</h3>
+      <ul>
+        <!-- 앵커 링크로 해당 섹션으로 이동 (#korean, #math 등) -->
+        <li><a href="#korean">국어과</a></li>
+        <li><a href="#math">수학과</a></li>
+        <li><a href="#english">영어과</a></li>
+        <li><a href="#science">과학과</a></li>
+        <li><a href="#examinfo">입시정보</a></li>
+      </ul>
+    </aside>
 
-    <!-- 수학과 -->
-    <section>
-      <h2>수학과</h2>
-      <div class="teacher-grid">
-        <!-- 유홍석: "Yu Hong Seok" -> yhs -->
-        <div class="teacher-card">
-          <img src="img/teacher_yhs.jpg" alt="유홍석 선생님">
-          <h3>유홍석 선생님</h3>
-          <p>수학과</p>
+    <!-- 메인 영역 -->
+    <main>
+      <!-- 국어과 -->
+      <section id="korean">
+        <h2>국어과</h2>
+        <div class="teacher-grid">
+          <!-- 박소진 선생님: teacher_psj.jpg -->
+          <div class="teacher-card">
+            <img src="img/teacher_psj.jpg" alt="박소진 선생님">
+            <h3>박소진 선생님</h3>
+            <p>국어과</p>
+          </div>
+          <!-- 강지웅 선생님: teacher_kjw.jpg -->
+          <div class="teacher-card">
+            <img src="img/teacher_kjw.jpg" alt="강지웅 선생님">
+            <h3>강지웅 선생님</h3>
+            <p>국어과</p>
+          </div>
         </div>
-        <!-- 조경희: "Jo Gyeong Hui" -> jgh -->
-        <div class="teacher-card">
-          <img src="img/teacher_jgh.jpg" alt="조경희 선생님">
-          <h3>조경희 선생님</h3>
-          <p>수학과</p>
-        </div>
-        <!-- 김현진: "Kim Hyun Jin" -> khj -->
-        <div class="teacher-card">
-          <img src="img/teacher_khj.jpg" alt="김현진 선생님">
-          <h3>김현진 선생님</h3>
-          <p>수학과</p>
-        </div>
-        <!-- 이관우: "Lee Gwan U" -> lgu -->
-        <div class="teacher-card">
-          <img src="img/teacher_lgu.jpg" alt="이관우 선생님">
-          <h3>이관우 선생님</h3>
-          <p>수학과</p>
-        </div>
-        <!-- 박건하: "Park Geon Ha" -> pgh -->
-        <div class="teacher-card">
-          <img src="img/teacher_pgh.jpg" alt="박건하 선생님">
-          <h3>박건하 선생님</h3>
-          <p>수학과</p>
-        </div>
-        <!-- 최재영: "Choi Jae Young" -> cjy -->
-        <div class="teacher-card">
-          <img src="img/teacher_cjy.jpg" alt="최재영 선생님">
-          <h3>최재영 선생님</h3>
-          <p>수학과</p>
-        </div>
-        <!-- 허정행: "Heo Jeong Haeng" -> hjh -->
-        <div class="teacher-card">
-          <img src="img/teacher_hjh.jpg" alt="허정행 선생님">
-          <h3>허정행 선생님</h3>
-          <p>수학과</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- 영어과 -->
-    <section>
-      <h2>영어과</h2>
-      <div class="teacher-grid">
-        <!-- 조봉현: "Jo Bong Hyeon" -> jbh -->
-        <div class="teacher-card">
-          <img src="img/teacher_jbh.jpg" alt="조봉현 선생님">
-          <h3>조봉현 선생님</h3>
-          <p>영어과</p>
+      <!-- 수학과 -->
+      <section id="math">
+        <h2>수학과</h2>
+        <div class="teacher-grid">
+          <!-- 유홍석: teacher_yhs.jpg -->
+          <div class="teacher-card">
+            <img src="img/teacher_yhs.jpg" alt="유홍석 선생님">
+            <h3>유홍석 선생님</h3>
+            <p>수학과</p>
+          </div>
+          <!-- 조경희: teacher_jgh.jpg -->
+          <div class="teacher-card">
+            <img src="img/teacher_jgh.jpg" alt="조경희 선생님">
+            <h3>조경희 선생님</h3>
+            <p>수학과</p>
+          </div>
+          <!-- 김현진: teacher_khj.jpg -->
+          <div class="teacher-card">
+            <img src="img/teacher_khj.jpg" alt="김현진 선생님">
+            <h3>김현진 선생님</h3>
+            <p>수학과</p>
+          </div>
+          <!-- 이관우: teacher_lgu.jpg -->
+          <div class="teacher-card">
+            <img src="img/teacher_lgu.jpg" alt="이관우 선생님">
+            <h3>이관우 선생님</h3>
+            <p>수학과</p>
+          </div>
+          <!-- 박건하: teacher_pgh.jpg -->
+          <div class="teacher-card">
+            <img src="img/teacher_pgh.jpg" alt="박건하 선생님">
+            <h3>박건하 선생님</h3>
+            <p>수학과</p>
+          </div>
+          <!-- 최재영: teacher_cjy.jpg -->
+          <div class="teacher-card">
+            <img src="img/teacher_cjy.jpg" alt="최재영 선생님">
+            <h3>최재영 선생님</h3>
+            <p>수학과</p>
+          </div>
+          <!-- 허정행: teacher_hjh.jpg -->
+          <div class="teacher-card">
+            <img src="img/teacher_hjh.jpg" alt="허정행 선생님">
+            <h3>허정행 선생님</h3>
+            <p>수학과</p>
+          </div>
         </div>
-        <!-- 오혜빈: "Oh Hye Bin" -> ohb -->
-        <div class="teacher-card">
-          <img src="img/teacher_ohb.jpg" alt="오혜빈 선생님">
-          <h3>오혜빈 선생님</h3>
-          <p>영어과</p>
-        </div>
-        <!-- 박혜린: "Park Hye Rin" -> phr -->
-        <div class="teacher-card">
-          <img src="img/teacher_phr.jpg" alt="박혜린 선생님">
-          <h3>박혜린 선생님</h3>
-          <p>영어과</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- 과학과 -->
-    <section>
-      <h2>과학과</h2>
-      <div class="teacher-grid">
-        <!-- 오준석: "Oh Jun Seok" -> ojs -->
-        <div class="teacher-card">
-          <img src="img/teacher_ojs.jpg" alt="오준석 선생님">
-          <h3>오준석 선생님</h3>
-          <p>과학과</p>
+      <!-- 영어과 -->
+      <section id="english">
+        <h2>영어과</h2>
+        <div class="teacher-grid">
+          <!-- 조봉현: teacher_jbh.jpg -->
+          <div class="teacher-card">
+            <img src="img/teacher_jbh.jpg" alt="조봉현 선생님">
+            <h3>조봉현 선생님</h3>
+            <p>영어과</p>
+          </div>
+          <!-- 오혜빈: teacher_ohb.jpg -->
+          <div class="teacher-card">
+            <img src="img/teacher_ohb.jpg" alt="오혜빈 선생님">
+            <h3>오혜빈 선생님</h3>
+            <p>영어과</p>
+          </div>
+          <!-- 박혜린: teacher_phr.jpg -->
+          <div class="teacher-card">
+            <img src="img/teacher_phr.jpg" alt="박혜린 선생님">
+            <h3>박혜린 선생님</h3>
+            <p>영어과</p>
+          </div>
         </div>
-        <!-- 김정연: "Kim Jeong Yeon" -> kjy -->
-        <div class="teacher-card">
-          <img src="img/teacher_kjy.jpg" alt="김정연 선생님">
-          <h3>김정연 선생님</h3>
-          <p>과학과</p>
+      </section>
+
+      <!-- 과학과 -->
+      <section id="science">
+        <h2>과학과</h2>
+        <div class="teacher-grid">
+          <!-- 오준석: teacher_ojs.jpg -->
+          <div class="teacher-card">
+            <img src="img/teacher_ojs.jpg" alt="오준석 선생님">
+            <h3>오준석 선생님</h3>
+            <p>과학과</p>
+          </div>
+          <!-- 김정연: teacher_kjy.jpg -->
+          <div class="teacher-card">
+            <img src="img/teacher_kjy.jpg" alt="김정연 선생님">
+            <h3>김정연 선생님</h3>
+            <p>과학과</p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- 입시정보 -->
-    <section>
-      <h2>입시정보</h2>
-      <p>준비 중입니다.</p>
-    </section>
-  </main>
+      <!-- 입시정보 -->
+      <section id="examinfo">
+        <h2>입시정보</h2>
+        <p>준비 중입니다.</p>
+      </section>
+    </main>
+  </div>
 
+  <!-- 푸터 -->
   <footer>
     <p>&copy; 2025 GRIT EDU</p>
   </footer>
