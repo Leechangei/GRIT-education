@@ -155,3 +155,53 @@ footer {
   color: #fff;
   text-align: center; 
 }
+.mega-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  width: 800px; /* 메가메뉴 전체 폭 */
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+/* 메가-dropdown에 마우스를 올렸을 때 mega-menu 보이기 */
+.mega-dropdown:hover .mega-menu {
+  display: flex; /* flex로 열을 가로로 배치 */
+  justify-content: space-around; /* 열 사이 균등 분배 */
+  gap: 20px;
+}
+
+/* 개별 컬럼 스타일 */
+.mega-column {
+  flex: 1; /* 열을 균등 분배 */
+}
+
+.mega-column h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #0078d4;
+}
+
+.mega-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mega-column ul li {
+  margin-bottom: 5px;
+}
+
+.mega-column ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.mega-column ul li a:hover {
+  text-decoration: underline;
+}
