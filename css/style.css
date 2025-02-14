@@ -16,7 +16,7 @@ body {
   전체적인 텍스트 중앙 정렬.
   (필요에 따라 일부 구역만 중앙 정렬하고 싶다면 선택자 범위를 조정하세요.)
 */
-header, main, section, footer {
+header, main, body, section, footer {
   text-align: center;
 }
 
@@ -78,6 +78,7 @@ nav ul li a:hover {
 /* 드롭다운 리스트: 세로 목록 */
 .dropdown-menu li {
   display: block;
+  text-align: center;
 }
 
 /* 드롭다운 링크 스타일 (중앙 정렬) */
