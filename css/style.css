@@ -36,12 +36,14 @@ header h1 {
 
 /* 네비게이션 메뉴: Flexbox로 중앙 정렬 */
 nav ul {
+  display: flex;              /* 가로 정렬 */
+  flex-wrap: nowrap;          /* 한 줄에 표시 */
+  align-items: center;        /* 세로 가운데 정렬 */
+  justify-content: space-between; /* 왼쪽 ~ 오른쪽 균등 분배 */
   list-style: none;
-  display: flex;
-  text-align: center;
-  justify-content: center;  /* 가로 중앙 정렬 */
+  margin: 0;
+  padding: 0;
 }
-
 /* 네비게이션 항목 스타일 */
 nav ul li {
   position: relative; /* 드롭다운 메뉴의 절대 위치 기준 */
