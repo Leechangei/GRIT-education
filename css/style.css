@@ -150,7 +150,7 @@ footer {
 .mega-menu {
   display: none;
   position: absolute;
-  left: 50%;
+  right: 50%;
   top: 100%;
   background: #fff;
   border: 1px solid #ddd;
