@@ -56,6 +56,9 @@ nav ul li a:hover {
       text-decoration: underline;
     }
 /* ===== Dropdown Menu ===== */
+.dropdown {
+  position: relative;
+}
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -89,7 +92,7 @@ nav ul li a:hover {
 
 /* 호버 시 드롭다운 표시 */
 .dropdown:hover .dropdown-menu {
-  display: flex;
+  display: block;
 }
 
 .dropdown-menu li a:hover {
