@@ -5,123 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GRIT EDU</title>
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    /* ===== 레이아웃 기본 ===== */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #333;
-    }
-    /* 상단 헤더 */
-    header {
-      border-bottom: 1px solid #ddd;
-      padding: 10px;
-      text-align: center;
-      background: #f9f9f9;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-
-    /* 네비게이션(메인 메뉴) */
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      margin: 10px 0 0;
-      padding: 0;
-    }
-    nav ul li {
-      position: relative;
-      margin: 0 15px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #333;
-      padding: 5px;
-      display: block;
-    }
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-
-    /* 메가메뉴(강사 소개) */
-    .mega-dropdown {
-      /* 부모 li */
-    }
-    .mega-menu {
-      display: none;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      top: 100%;
-      background: #fff;
-      border: 1px solid #ddd;
-      width: 600px;
-      padding: 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      z-index: 999;
-    }
-    .mega-dropdown:hover .mega-menu {
-      display: flex; 
-      justify-content: space-around; 
-      gap: 10px;
-    }
-    .mega-column h3 {
-      font-size: 1rem;
-      margin-bottom: 10px;
-      color: #0078d4;
-    }
-    .mega-column ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .mega-column ul li {
-      margin-bottom: 5px;
-    }
-    .mega-column ul li a {
-      color: #333;
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
-    .mega-column ul li a:hover {
-      text-decoration: underline;
-    }
-
-    /* 더보기 드롭다운 */
-    .dropdown ul.dropdown-menu {
-      display: none;
-      position: absolute;
-      left: 0;
-      top: 100%;
-      background: #fff;
-      border: 1px solid #ddd;
-      min-width: 120px;
-      z-index: 999;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    .dropdown:hover ul.dropdown-menu {
-      display: block;
-    }
-    .dropdown-menu li {
-      margin: 0;
-    }
-    .dropdown-menu li a {
-      display: block;
-      padding: 8px 10px;
-      color: #333;
-      text-decoration: none;
-    }
-    .dropdown-menu li a:hover {
-      background: #f0f0f0;
-    }
-
+  <style>   
     /* 메인 컨테이너: 사이드바 + 메인 컨텐츠 */
     .container {
       display: flex; 
@@ -220,6 +104,13 @@
 <body>
   <!-- 상단 헤더 + 네비게이션 -->
   <header>
+    <header style="width: 100%; border-bottom: 1px solid #ddd; padding: 10px;">
+    <!-- 첫 줄: 로고 + GRIT EDU -->
+    <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
+      <img src="images/logo.jpg" alt="학원 로고" style="height: 50px;">
+      <h1 style="margin: 0;">GRIT EDU</h1>
+    </div>
+      
     <h1>GRIT EDU</h1>
     <nav>
       <ul>
