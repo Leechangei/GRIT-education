@@ -35,7 +35,7 @@ header h1 {
 }
 
 /* 네비게이션 메뉴: Flexbox로 중앙 정렬 */
-.main-nav ul {
+nav ul {
   display: flex;              /* 가로 정렬 */
   flex-wrap: nowrap;          /* 한 줄에 표시 */
   align-items: center;        /* 세로 가운데 정렬 */
@@ -45,7 +45,7 @@ header h1 {
   padding: 0;
 }
 /* 네비게이션 항목 스타일 */
-.main-nav ul li {
+nav ul li {
   position: relative; /* 드롭다운 메뉴의 절대 위치 기준 */
   margin-right: 10px;
   margin-left: 10px;
@@ -55,7 +55,7 @@ header h1 {
 }
 
 /* 네비게이션 링크 스타일 */
-.main-nav ul li a {
+nav ul li a {
   color: #000;
   text-decoration: none;
   padding: 10px;
