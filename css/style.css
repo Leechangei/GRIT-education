@@ -60,7 +60,7 @@ nav ul li a:hover {
   display: none;
   position: absolute;
   top: 100%; /* 부모(li) 바로 아래 */
-  left: 50% !important;
+  left: 0% !important;
   transform: translateX(-50%) !important;
   background: #fff;
   border: 1px solid #ddd;
